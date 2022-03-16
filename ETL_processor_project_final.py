@@ -160,6 +160,10 @@ while operation != "NONE":
             # cols = [i.strip() for i in columns_to_change.split(",") ]
             
             data_new=pd.concat([data_new, orig_data[columns_to_change]], axis = 1)
+            
+    print("Number of Columns: " + str(len(data_new.columns)))
+    print("Number of Rows: " + str(len(data_new)))
+    print(data_new.head())
     
     operation = askQuestion("Which operation would you like to perfrom on the data?", 
                         ["add columns", "drop columns","none"])
